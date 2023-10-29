@@ -1,0 +1,78 @@
+#content {
+    width:300px;
+    margin:50px auto;
+}
+
+#thermometer {
+    width:70px;
+    height:430px;
+    position: relative;
+    /*border:1px solid #aaa; */
+margin-left : 10% ; 
+	float:left;
+	background-image: url('ter2.png'); 
+	 background-repeat: no-repeat;
+	background-position:  center;
+	
+    -webkit-border-radius: 12px;
+       -moz-border-radius: 12px;
+        -ms-border-radius: 12px;
+         -o-border-radius: 12px;
+          /*  border-radius: 12px;*/
+
+    -webkit-box-shadow: 1px 1px 4px #999, 5px 0 20px #999;
+       -moz-box-shadow: 1px 1px 4px #999, 5px 0 20px #999;
+        -ms-box-shadow: 1px 1px 4px #999, 5px 0 20px #999;
+         -o-box-shadow: 1px 1px 4px #999, 5px 0 20px #999;
+            box-shadow: 1px 1px 4px #999, 5px 0 20px #999;
+}
+
+#thermometer .track {
+    height:300px;
+    top:50px;
+    width:10px;
+   /* border: 1px solid #aaa; */
+    position: relative;
+    margin:0 auto;
+	
+    background: rgb(255,255,255);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgb(0,0,0)), color-stop(1%,rgb(255,255,255)));
+    background: -webkit-linear-gradient(top, rgb(0,0,0) 0%,rgb(255,255,255) 10%);
+    background:      -o-linear-gradient(top, rgb(0,0,0) 0%,rgb(255,255,255) 10%);
+    background:     -ms-linear-gradient(top, rgb(0,0,0) 0%,rgb(255,255,255) 10%);
+    background:    -moz-linear-gradient(top, rgb(0,0,0) 0%,rgb(255,255,255) 10%);
+    background:   linear-gradient(to bottom, rgb(0,0,0) 0%,rgb(255,255,255) 10%);
+    background-position: 0 -1px;
+    background-size: 100% 5%;
+}
+
+#thermometer .progress {
+    height:0%;
+    width:100%;
+    background: #d10006;
+    background: #d10006;
+    position: absolute;
+    bottom:0;
+    left:0;
+	
+}
+
+#thermometer .goal {
+    position:absolute;
+    top:0;
+}
+
+#thermometer .amount {
+   display: inline-block;
+    padding:0 5px 0 60px;
+    font-family: Trebuchet MS;
+    font-weight: bold;
+    color:white;
+}
+
+#thermometer .progress .amount {
+    padding:0 60px 0 5px;
+    position: absolute;
+    color:#e0592b;
+    left:10%;
+}

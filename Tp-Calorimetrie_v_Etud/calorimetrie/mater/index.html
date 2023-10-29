@@ -1,0 +1,532 @@
+<html>
+<head>
+	<meta charset='UTF-8'>
+
+	<title>l'Expérience Calorimétrie</title>
+
+	<link rel='stylesheet' type='text/css' href='style.css' />
+        <link rel="stylesheet" href="css2/style.css">
+		<link rel="stylesheet" href="t3/style.css">
+
+	<script src='//ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js'></script>
+<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+
+	
+		<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+
+    <script src="js/index.js"> </script> 
+	
+	<script language="javascript" type="text/javascript">
+
+function cache(id)
+             {document.getElementById(id).style.display = "none";
+			 alert('rrr');
+			 }
+     
+        function montre(id)
+          {  document.getElementById(id).style.display = "block";}
+		  var K ;
+function calculerT3()
+{
+ a= Math.random() * (100 - 30) + 30 ;
+ K = parseInt(a);
+m1 = parseInt(document.f1.t1.value);
+T1= parseInt(document.f1.t2.value) ;
+m2 = parseInt(document.f1.t11.value) ;
+T2= parseInt(document.f1.t22.value) ;
+Ce= 4185 ;
+
+ 
+ cc=((m1*T1+ m2*T2) * Ce + K*T1)/((m1 + m2)* Ce +a) ;
+document.f1.t5.value= parseInt(cc );
+//document.f1.t5.value= parseInt((T1+T2)/2) ;
+//((m1+ m2)*Ce+k)  ;
+}
+function valid()
+{
+if (K==document.f1.k.value)
+alert(" la valeur de K est juste");
+else
+alert(" la valeur de K est faux");
+
+}
+function bascule(elem)
+   {
+   etat=document.getElementById(elem).style.display;
+   if(etat=="none"){
+   document.getElementById(elem).style.display="block";
+   }
+   else{
+   document.getElementById(elem).style.display="none";
+   }
+   }
+
+	   </script>
+	
+	
+		<link rel="stylesheet" href="css/style.css">
+
+
+</head>
+
+<!--<body class="sa" style="width:100%;margin:auto;min-width:600px;max-width:2000px; background-size: 100% 100%;"> -->
+<body>
+<form name="f1">
+<link rel="stylesheet" href="css_m/style.css" type="text/css" media="screen">
+<link rel='stylesheet' type='text/css' href='style.css' />
+   
+<div class="example">
+
+   		<div id="page-wrap">
+
+	 <center>
+	 <p>   <h2> Calorimètre Simple </h2>
+	 <br>
+
+</p>
+
+	<section class="image-gallery group">
+
+		<figure tabindex="1">
+			<img src="cal.png"  />
+			<figcaption>Calorimètre!</figcaption>
+		</figure>
+<figure tabindex="3">
+			<img src="couver2.png"  />
+			<figcaption>Couvercle</figcaption>
+		</figure>
+		<figure tabindex="3">
+			<img src="4.jpg"  />
+			<figcaption>Thermomètre</figcaption>
+		</figure>
+		<figure tabindex="2">
+			<img src="ag.png"  />
+			<figcaption>Agitateur</figcaption>
+		</figure>
+
+		
+		
+		<br>
+
+		
+
+	</section>
+
+	<h2> Calorimètre électrique </h2>
+	<center>	<section class="image-gallery group">
+
+		<figure tabindex="1">
+			<img src="elec.png"  />
+			
+		</figure>
+		
+		
+		<br>
+
+		
+
+	</section> </center>
+	
+	
+<center><div id="page-wrap">
+
+</div></center>
+</div>
+			
+<br>
+
+
+
+
+
+ 
+
+ 
+<fieldset id="mycart2" class="cart" style='display:none;width:97% ;'><legend>L'expérience</legend>
+<table> <tr> <td>
+
+
+<div id="vv"  style='display:none;'>
+	<div id="cartArea"></div>
+				
+ <center> <font size="20" face="monotype corsiva" color ="violet"> <h1> Investigation initiale </h1> </font></center>	<br>
+ <center>
+ <input type="button" name="envoi"  value ="Suivant" style="width:200px" onclick="document.getElementById('vue1').style.display='block'; document.getElementById('vv').style.display='none'; document.getElementById('mycart2').style.display='block'" > </center>
+</div>
+
+
+<div id="vue1"  style='display:none;' >  
+ <center><font size="16" face="monotype corsiva" color ="violet"> <h1>Investigation N°:1 </h1></font> </center>
+<table> <tr> <td>
+	<font size="2">Entrer la quantité de l'eau froid      </font>   </td><td>  <input type="text" size="6" name="t1" value="0" onblur="if (document.f1.t1.value < 0 || document.f1.t1.value > 1000) {alert('entrer une valeur entre 0 et 1000'); }"> G  </td>
+	<br> <br>
+	<tr> <td><font size="2"> Entrer la Température de l'eau froid    </font></td> <td>    <input type="text" size="6" name="t2" value="0"  onblur="if (document.f1.t2.value < 0 || document.f1.t2.value > 100) {alert('entrer une valeur entre 0 et 100') }" onchange="thermometer();"> °C  </td>
+	</tr><tr colspan="2" align="center">  <td><br>
+	
+<input type="button" name="b1" onclick="thermometer1();" value="verser" style="width:200px"> 
+<br><br><input type="button" name="envoi"  style="width:200px" value ="Suivant" onclick="document.getElementById('vue2').style.display='block'; document.getElementById('vue1').style.display='none';" > </center>
+</td> </tr>
+</table>
+<center>	 
+</div>
+
+<div id="vue2"  style='display:none;' >  
+  
+	<center><font size="20" face="monotype corsiva" color ="violet"> <h1> Investigation N°:2 </h1></font></center>
+							
+<table> <tr> <td>
+<font size="2"> Entrer la quantité d’eau chaude </font> </td> <td> <input type="text" size="6" name="t11" value= "0" onblur="if (document.f1.t11.value < 0 || document.f11.t1.value > 1000) {alert('entrer une valeur entre 0 et 1000'); } ;thermometer1(); "> Gramme </td>
+	 
+</tr> <tr> <td><font size="2"> Entrer la température de l'eau chaud T2 </font> </td> <td> <input type="text" size="6"  name="t22" value= "0" onblur="if (document.f1.t22.value < 0 || document.f1.t22.value > 1000) {alert('entrer une valeur entre 0 et 1000'); } ; thermometerT3();thermometer1();" onChange ="calculerT3()" > °C  <br> </td></tr>
+
+		<tr colspan="2"> <td> <br> <br> 
+	<input type="button" name="b2" onclick="thermometer1();" value="Verser l'eau chaud" style="width:200px ; color : navy" >
+		<br> <br><input type="button" name="envoi" style="width:200px" value =" La Température T3 " onclick ="document.getElementById('mycart3').style.display = 'block'; thermometerT3();" >
+
+		</td></tr></table>
+	
+  </div>
+  
+  </td> <td>
+	<div name="im1" id="im1" style="position:static ;z-index:6002 ; border : 0px; width: 430px">
+<img src="couver.png" onmousemove="document.getElementById('im1').style.position='relative' ; ">
+</div>
+
+  <div id="thermometer1">
+            <div class="track1">
+                <div class="goal1">
+                    <div class="amount1" id="goalAmount1"> <font color ="white">1000</font> </div>
+                </div>
+                <div class="progress1">
+                    <div style="display: block;" class="amount1" id="progessAmount1"> 0 </div>
+                </div>
+				
+				<div id="thermometer" style="margin-top:-70px">
+
+				<div class="track">
+					<div class="goal">
+						<div class="amount"> <font color ="white">100</font> </div>
+					</div>
+					<div class="progress">
+						<div class="amount">0 </div>
+					</div>
+				</div>
+
+				</div>
+				<div class = "shake" style="margin-top:-70px">
+					    <img  src="2.png" > </div>
+
+		<!--<div class="bulb"><div class="inner-bulb"></div></div> -->
+            </div>
+   </div>
+
+</td></tr></table>
+  
+		
+							<br><br>
+
+<!-- put type="button" onClick="calculerT3(document.t2.value , document.t4.value , document.t1.value , 200 , document.t2.value ,5)" value = "Mélanger"> -->
+
+		
+		
+		
+<fieldset id="mycart3" class="cart"  style='display:none;'><legend></legend>
+	<div id="cartArea"></div>
+ <H1> Travail à faire </h1>
+ 
+ <p> la température d'équilibre T3  &nbsp;&nbsp;&nbsp; <input type ="text" name="t5" disabled > °C </p><br>
+ <p>Ecrire une équation calorimètrique d'échange de chaleur. &nbsp;&nbsp;&nbsp; 
+
+ <textarea rows="4" cols="50"  >   K=..........................
+</textarea>
+ </p> <br> 
+  <p> Calculer la valeur de la capacité calorifique du qualorimètre et ces accesoire.  &nbsp;&nbsp;&nbsp; <input type ="text" name="k"> J/kg </p> <br>
+<center><input type="button" style="width:200px" value ="Envoyer" onclick="valid();"> </center>
+
+  
+</fieldset> </fieldset>
+</form>
+ <style type="text/css" style="display: none !important;">
+	* {
+		margin: 0;
+		padding: 0;
+	}
+	#bor
+{
+    border-radius: 10px;;
+}
+
+#s1{
+height:0%;
+
+}
+
+.tuna {
+  /* steps causes the animation to chunk into 12 equal pieces */
+  animation: walk-cycle 1s steps(12) infinite;
+  background: url(4.png) ;
+  background-repeat: no-repeat;
+  height: 200px;
+  width: 400px;
+  margin: 100px auto 0;
+}
+
+@keyframes walk-cycle {  
+  0% {background-position: 0 0; } 
+  100% {background-position: 0 -2391px; } /* Must be full height of sprite or skipping will happen.*/
+}
+
+
+	.cart {
+	border: 4px solid #0066FF;
+	border-radius:6px;
+	min-height:128px;
+	margin:32px;	
+}
+
+	body {
+		overflow-x: hidden;
+	}
+	#demo-top-bar {
+		text-align: left;
+		background: #222;
+		position: relative;
+		zoom: 1;
+		width: 100% !important;
+		z-index: 6000;
+		padding: 20px 0 20px;
+	}
+	#demo-bar-inside {
+		width: 960px;
+		margin: 0 auto;
+		position: relative;
+		overflow: hidden;
+	}
+	#demo-bar-buttons {
+		padding-top: 10px;
+		float: right;
+	}
+	#demo-bar-buttons a {
+		font-size: 12px;
+		margin-left: 20px;
+		color: white;
+		margin: 2px 0;
+		text-decoration: none;
+		font: 14px "Lucida Grande", Sans-Serif !important;
+	}
+	#demo-bar-buttons a:hover,
+	#demo-bar-buttons a:focus {
+		text-decoration: underline;
+	}
+	#demo-bar-badge {
+		display: inline-block;
+		width: 302px;
+		padding: 0 !important;
+		margin: 0 !important;
+		background-color: transparent !important;
+	}
+	#demo-bar-badge a {
+		display: block;
+		width: 100%;
+		height: 38px;
+		border-radius: 0;
+		bottom: auto;
+		margin: 0;
+		background: url(/images/examples-logo.png) no-repeat;
+		background-size: 100%;
+		overflow: hidden;
+		text-indent: -9999px;
+	}
+	#demo-bar-badge:before, #demo-bar-badge:after {
+		display: none !important;}	
+		
+		
+	.footer:after, p:after {content:"."; display:block; height:0; clear:both; visibility:hidden;}
+.footer p {line-height:1.3em; text-align:center; color:rgb(125,125,125); font-weight:bold; font-size:110%;}
+.footer p.credits {font-weight:normal;}
+.footer a {text-decoration:underline; color:rgb(125,125,125);}
+.footer a:hover {text-decoration:none; color:rgb(0,0,0);}
+.footer a:visited {color:rgb(0,0,0);}
+
+#sa-thermometer {
+  width: 300px;
+  height: 300px;
+  margin: 120px auto 0;
+}
+#sa-thermometer .tube {
+  width: 250px;
+  height: 200px;
+  
+ border-width:5px;
+ border-style:solid;
+ border-color:black ; 
+ border-top-style:none ;
+
+  position: relative;
+  
+}
+
+#sa-thermometer .liquid {
+  background: #3498db;
+  width: 240px;
+  margin-left: 5px;
+  position: absolute;
+  bottom: 5px;
+  
+}
+
+.shop {
+	border-radius:6px;
+	margin:32px;
+}
+.cart {
+	border: 4px solid #0066FF;
+	border-radius:6px;
+	min-height:128px;
+	margin:32px;	
+}
+.product {
+	border:3px solid white;
+}
+.product:hover {
+	border:3px solid red;
+	cursor:move;
+}
+.itemchoosen {
+	this.style.opacity = 0.5;
+	this.style.border = "2px solid red";
+}
+.itemblurred {
+	this.style.border = none;
+}
+
+/*! * * * * * * * * * * * * * * * * * * * *\  
+  CSShake :: shake
+  v1.5.0
+  CSS classes to move your DOM
+  (c) 2015 @elrumordelaluz
+  http://elrumordelaluz.github.io/csshake/
+  Licensed under MIT
+\* * * * * * * * * * * * * * * * * * * * */
+.shake{float:right;  padding: 10px  ; display:inline-block;transform-origin:center center}.shake-freeze,.shake-constant.shake-constant--hover:hover,.shake-trigger:hover .shake-constant.shake-constant--hover{animation-play-state:paused}.shake-freeze:hover,.shake-trigger:hover .shake-freeze,.shake:hover,.shake-trigger:hover .shake{animation-play-state:running}@keyframes shake{2%{transform:translate(-1.5px, .5px) rotate(.5deg)}4%{transform:translate(.5px, -1.5px) rotate(.5deg)}6%{transform:translate(-.5px, .5px) rotate(1.5deg)}8%{transform:translate(-.5px, -1.5px) rotate(1.5deg)}10%{transform:translate(-.5px, 1.5px) rotate(.5deg)}12%{transform:translate(2.5px, -1.5px) rotate(-.5deg)}14%{transform:translate(1.5px, .5px) rotate(-.5deg)}16%{transform:translate(1.5px, -1.5px) rotate(.5deg)}18%{transform:translate(2.5px, -.5px) rotate(.5deg)}20%{transform:translate(-.5px, 1.5px) rotate(.5deg)}22%{transform:translate(-.5px, -.5px) rotate(.5deg)}24%{transform:translate(2.5px, -1.5px) rotate(1.5deg)}26%{transform:translate(-.5px, 2.5px) rotate(-.5deg)}28%{transform:translate(2.5px, -1.5px) rotate(.5deg)}30%{transform:translate(-1.5px, -.5px) rotate(-.5deg)}32%{transform:translate(.5px, 1.5px) rotate(-.5deg)}34%{transform:translate(2.5px, .5px) rotate(.5deg)}36%{transform:translate(1.5px, -1.5px) rotate(.5deg)}38%{transform:translate(2.5px, 2.5px) rotate(.5deg)}40%{transform:translate(-.5px, -.5px) rotate(.5deg)}42%{transform:translate(2.5px, -1.5px) rotate(.5deg)}44%{transform:translate(1.5px, -.5px) rotate(1.5deg)}46%{transform:translate(.5px, 2.5px) rotate(.5deg)}48%{transform:translate(.5px, 1.5px) rotate(-.5deg)}50%{transform:translate(-1.5px, -.5px) rotate(-.5deg)}52%{transform:translate(.5px, 1.5px) rotate(-.5deg)}54%{transform:translate(-.5px, .5px) rotate(-.5deg)}56%{transform:translate(1.5px, -.5px) rotate(.5deg)}58%{transform:translate(.5px, 2.5px) rotate(1.5deg)}60%{transform:translate(-.5px, 1.5px) rotate(-.5deg)}62%{transform:translate(2.5px, .5px) rotate(1.5deg)}64%{transform:translate(-.5px, 2.5px) rotate(.5deg)}66%{transform:translate(.5px, -.5px) rotate(-.5deg)}68%{transform:translate(.5px, -.5px) rotate(-.5deg)}70%{transform:translate(-1.5px, 2.5px) rotate(1.5deg)}72%{transform:translate(-.5px, 1.5px) rotate(1.5deg)}74%{transform:translate(-.5px, 2.5px) rotate(1.5deg)}76%{transform:translate(2.5px, .5px) rotate(-.5deg)}78%{transform:translate(2.5px, 1.5px) rotate(1.5deg)}80%{transform:translate(-1.5px, -.5px) rotate(-.5deg)}82%{transform:translate(2.5px, -1.5px) rotate(1.5deg)}84%{transform:translate(-1.5px, .5px) rotate(-.5deg)}86%{transform:translate(2.5px, -1.5px) rotate(.5deg)}88%{transform:translate(1.5px, -.5px) rotate(.5deg)}90%{transform:translate(2.5px, 1.5px) rotate(.5deg)}92%{transform:translate(-.5px, -1.5px) rotate(-.5deg)}94%{transform:translate(-1.5px, 1.5px) rotate(.5deg)}96%{transform:translate(2.5px, 2.5px) rotate(1.5deg)}98%{transform:translate(1.5px, -1.5px) rotate(-.5deg)}0%,100%{transform:translate(0, 0) rotate(0)}}.shake:hover,.shake-trigger:hover .shake,.shake.shake-freeze,.shake.shake-constant{animation-name:shake;animation-duration:100ms;animation-timing-function:ease-in-out;animation-iteration-count:infinite}
+
+</style>
+
+
+
+
+
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js'></script>
+
+	<script src="js2/index.js"></script>
+		<script src="T3/index.js"></script>
+
+
+<script type="text/javascript">
+N2 = (document.all) ? 0 : 1;
+ 
+if (N2) {
+ob2 = document.getElementById('im2');
+}
+ 
+document.onmousedown = MD2; 
+ 
+function MD2(ee) {
+document.onmousemove = MM2;
+document.onmouseup = MU2;
+ 
+     if (N2) {
+ 
+          X2=ee.pageX;
+          Y2=e.pageY;
+ 
+          X02=ob2.style.left;
+          Y02=ob2.style.top;
+          X02 = X02.substr(0,X02.length-2);
+          Y02 = Y02.substr(0,Y02.length-2);
+          X02 = X02*1;
+          Y02 = Y02*1;
+     }
+     else {
+ 
+          ob2 = event.srcElement.parentElement.style;
+ 
+          X2=event.offsetX;
+          Y2=event.offsetY;
+     }
+}
+ 
+function MM2(ee) {
+     if (ob2) {
+          if (N2) {
+ 
+               ob2.style.left = X02+ee.pageX-X2;
+               ob2.style.top = Y02+ee.pageY-Y2;
+          }
+          else {
+               ob2.pixelLeft = event.clientX-X2 + document.body.scrollLeft;
+               ob2.pixelTop = event.clientY-Y2 + document.body.scrollTop;
+	  return false;
+          }
+     }
+}
+function MU2() {
+     document.onmousemove = null;
+}
+</script>
+	
+	
+<script type="text/javascript">
+N = (document.all) ? 0 : 1;
+ 
+if (N) {
+ob = document.getElementById('im1');
+}
+ 
+document.onmousedown = MD; 
+ 
+function MD(e) {
+document.onmousemove = MM;
+document.onmouseup = MU;
+ 
+     if (N) {
+ 
+          X=e.pageX;
+          Y=e.pageY;
+ 
+          X0=ob.style.left;
+          Y0=ob.style.top;
+          X0 = X0.substr(0,X0.length-2);
+          Y0 = Y0.substr(0,Y0.length-2);
+          X0 = X0*1;
+          Y0 = Y0*1;
+     }
+     else {
+ 
+          ob = event.srcElement.parentElement.style;
+ 
+          X=event.offsetX;
+          Y=event.offsetY;
+     }
+}
+ 
+function MM(e) {
+     if (ob) {
+          if (N) {
+ 
+               ob.style.left = X0+e.pageX-X;
+               ob.style.top = Y0+e.pageY-Y;
+          }
+          else {
+               ob.pixelLeft = event.clientX-X + document.body.scrollLeft;
+               ob.pixelTop = event.clientY-Y + document.body.scrollTop;
+	  return false;
+          }
+     }
+}
+function MU() {
+     document.onmousemove = null;
+}
+</script>
+</div>
+</body></html>
